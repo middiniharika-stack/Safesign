@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>SafeSign — DeFi Security</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+</head>
+
+
+<body>
+
+    <!-- =====================================================
+         NAVIGATION
+    ====================================================== -->
+
+    <nav class="navbar">
+
+        <div class="brand">
+
+            <div class="brand-logo">
+                ✓
+            </div>
+
+            <div>
+
+                <div class="brand-name">
+                    SafeSign
+                </div>
+
+                <div class="brand-tagline">
+                    DeFi Security
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="nav-center">
+
+            <a href="#review">
+                Review
+            </a>
+
+            <a href="#history">
+                History
+            </a>
+
+            <a href="#how">
+                How it works
+            </a>
+
+        </div>
+
+
+        <div class="nav-right">
+
+            <div
+                id="network-badge"
+                class="network-pill"
+            >
+                Ethereum Sepolia
+            </div>
+
+            <button
+                id="connect-btn"
+                class="connect-button"
+            >
+                Connect wallet
+            </button>
+
+        </div>
+
+    </nav>
+
+
+
+    <!-- =====================================================
+         SETUP WARNING
+    ====================================================== -->
+
+    <div
+        id="setup-warning"
+        class="setup-warning hidden"
+    ></div>
+
+
+
+    <!-- =====================================================
+         MAIN
+    ====================================================== -->
+
+    <main>
+
+
+        <!-- =================================================
+             HERO
+        ================================================== -->
+
+        <section class="hero">
+
+            <div class="hero-copy">
+
+                <div class="eyebrow">
+
+                    <span class="eyebrow-dot"></span>
+
+                    TRANSACTION SECURITY
+
+                </div>
+
+
+                <h1>
+
+                    Know what you're
+
+                    <span>
+                        signing.
+                    </span>
+
+                </h1>
+
+
+                <p>
+                    SafeSign explains your DeFi transaction
+                    before MetaMask asks you to approve it.
+                </p>
+
+
+                <div class="hero-actions">
+
+                    <a
+                        href="#review"
+                        class="primary-button"
+                    >
+                        Review transaction
+
+                        <span>
+                            →
+                        </span>
+
+                    </a>
+
+
+                    <a
+                        href="#how"
+                        class="text-button"
+                    >
+                        How it works
+                    </a>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- HERO SECURITY CARD -->
+
+            <div class="hero-security-card">
+
+                <div class="hero-card-top">
+
+                    <div>
+
+                        <span class="small-label">
+                            SAFE SIGNING
+                        </span>
+
+                        <h3>
+                            Protection before approval
+                        </h3>
+
+                    </div>
+
+
+                    <div class="shield-icon">
+                        ✓
+                    </div>
+
+                </div>
+
+
+                <div class="security-preview">
+
+                    <div class="preview-line">
+
+                        <span>
+                            Transaction
+                        </span>
+
+                        <strong>
+                            approve()
+                        </strong>
+
+                    </div>
+
+
+                    <div class="preview-line">
+
+                        <span>
+                            Permission
+                        </span>
+
+                        <strong class="danger-text">
+                            Unlimited
+                        </strong>
+
+                    </div>
+
+
+                    <div class="preview-line">
+
+                        <span>
+                            SafeSign
+                        </span>
+
+                        <strong class="warning-text">
+                            Review required
+                        </strong>
+
+                    </div>
+
+                </div>
+
+
+                <div class="mini-protection">
+
+                    <div class="mini-icon">
+                        !
+                    </div>
+
+                    <div>
+
+                        <strong>
+                            See the consequence
+                        </strong>
+
+                        <span>
+                            before you sign
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             WALLET
+        ================================================== -->
+
+        <section class="wallet-bar">
+
+            <div class="wallet-left">
+
+                <div class="wallet-avatar">
+                    ◇
+                </div>
+
+
+                <div>
+
+                    <span class="small-label">
+                        CONNECTED WALLET
+                    </span>
+
+                    <strong id="wallet-address">
+                        Not connected
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+            <div class="wallet-balance">
+
+                <span>
+                    Balance
+                </span>
+
+                <strong id="wallet-balance">
+                    -
+                </strong>
+
+            </div>
+
+
+            <div
+                id="connect-status"
+                class="wallet-status"
+            ></div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             REVIEW
+        ================================================== -->
+
+        <section
+            id="review"
+            class="review-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        01
+                    </span>
+
+
+                    <div>
+
+                        <span class="small-label">
+                            TRANSACTION REVIEW
+                        </span>
+
+                        <h2>
+                            Review before you sign
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <span class="section-description">
+                    Decode · Analyze · Understand
+                </span>
+
+            </div>
+
+
+
+            <div class="review-layout">
+
+
+                <!-- =========================================
+                     TRANSACTION PANEL
+                ========================================== -->
+
+                <div class="transaction-panel">
+
+                    <div class="panel-heading">
+
+                        <div>
+
+                            <span class="small-label">
+                                TRANSACTION DETAILS
+                            </span>
+
+                            <h3>
+                                What are you signing?
+                            </h3>
+
+                        </div>
+
+
+                        <div class="step-pill">
+                            STEP 1
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- CONTRACT -->
+
+                    <label for="tx-contract">
+                        Destination contract
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <span class="input-icon">
+                            ◇
+                        </span>
+
+                        <input
+                            id="tx-contract"
+                            type="text"
+                            placeholder="0x..."
+                            autocomplete="off"
+                        >
+
+                    </div>
+
+
+
+                    <!-- DATA -->
+
+                    <label for="tx-data">
+                        Transaction data
+                    </label>
+
+                    <textarea
+                        id="tx-data"
+                        rows="4"
+                        placeholder="0x..."
+                    ></textarea>
+
+
+
+                    <!-- VALUE -->
+
+                    <label for="tx-value">
+                        ETH value
+                    </label>
+
+                    <div class="input-wrap">
+
+                        <span class="input-icon">
+                            Ξ
+                        </span>
+
+                        <input
+                            id="tx-value"
+                            type="text"
+                            value="0"
+                            placeholder="0"
+                        >
+
+                        <span class="input-suffix">
+                            ETH
+                        </span>
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         DEMO
+                    ====================================== -->
+
+                    <div class="quick-demo">
+
+                        <div class="quick-demo-heading">
+
+                            <div class="demo-icon">
+                                ⚡
+                            </div>
+
+
+                            <div>
+
+                                <strong>
+                                    Security demo
+                                </strong>
+
+                                <span>
+                                    Test a risky approval
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <input
+                            id="token-address"
+                            type="text"
+                            value="0x1c7D4B196Cb0C7B01d743Fbc6116a902379C7238"
+                            placeholder="Token contract"
+                        >
+
+
+                        <input
+                            id="spender-address"
+                            type="text"
+                            value="0x000000000000000000000000000000000000dEaD"
+                            placeholder="Spender address"
+                        >
+
+
+                        <button
+                            id="approval-demo-btn"
+                            class="outline-button full-button"
+                        >
+
+                            Prepare unlimited approval
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+
+
+                    <!-- =====================================
+                         TRANSACTION PREVIEW
+                    ====================================== -->
+
+                    <div
+                        id="tx-preview"
+                        class="transaction-preview"
+                    >
+
+                        <div class="preview-heading">
+                            LIVE PREVIEW
+                        </div>
+
+
+                        <div class="preview-grid">
+
+
+                            <div class="preview-item">
+
+                                <span>
+                                    Function
+                                </span>
+
+                                <strong id="decoded-function">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div class="preview-item">
+
+                                <span>
+                                    Contract
+                                </span>
+
+                                <strong id="decoded-contract">
+                                    -
+                                </strong>
+
+                            </div>
+
+
+                            <div class="preview-item">
+
+                                <span>
+                                    ETH value
+                                </span>
+
+                                <strong id="tx-display-value">
+                                    0 ETH
+                                </strong>
+
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="arguments">
+
+                            <span>
+                                Arguments
+                            </span>
+
+                            <pre id="decoded-args">No arguments</pre>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- ANALYZE -->
+
+                    <button
+                        id="analyze-btn"
+                        class="primary-button analyze-button"
+                    >
+
+                        Analyze transaction
+
+                        <span>
+                            →
+                        </span>
+
+                    </button>
+
+
+                    <div
+                        id="analysis-status"
+                        class="analysis-status"
+                    ></div>
+
+                </div>
+
+
+
+                <!-- =========================================
+                     SECURITY PANEL
+                ========================================== -->
+
+                <div
+                    id="risk-card"
+                    class="security-panel hidden"
+                >
+
+                    <div class="security-panel-top">
+
+                        <div>
+
+                            <span class="small-label">
+                                SAFE SIGN ANALYSIS
+                            </span>
+
+                            <h3>
+                                Security score
+                            </h3>
+
+                        </div>
+
+
+                        <div class="security-badge">
+                            ● LIVE
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- SCORE -->
+
+                    <div class="score-area">
+
+                        <div class="score-circle">
+
+                            <div>
+
+                                <strong id="risk-score">
+                                    0/100
+                                </strong>
+
+                                <span>
+                                    risk
+                                </span>
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="score-info">
+
+                            <span class="small-label">
+                                RISK LEVEL
+                            </span>
+
+                            <strong
+                                id="risk-level"
+                                class="risk-level"
+                            >
+                                -
+                            </strong>
+
+
+                            <div class="score-description">
+                                SafeSign evaluates the transaction
+                                before you approve it.
+                            </div>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- METER -->
+
+                    <div class="risk-meter">
+
+                        <div
+                            id="risk-meter-fill"
+                            class="risk-meter-fill"
+                        ></div>
+
+                    </div>
+
+
+
+                    <!-- FLAGS -->
+
+                    <div class="risk-section-title">
+                        WHY THIS MATTERS
+                    </div>
+
+
+                    <div
+                        id="risk-flags"
+                        class="risk-flags"
+                    >
+                        -
+                    </div>
+
+
+
+                    <!-- IMPACT -->
+
+                    <div class="impact-card">
+
+                        <div class="impact-icon">
+                            !
+                        </div>
+
+
+                        <div>
+
+                            <span class="small-label">
+                                BEFORE YOU SIGN
+                            </span>
+
+                            <h4>
+                                What happens if I sign?
+                            </h4>
+
+                            <p id="sign-impact">
+                                -
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+
+                    <!-- EXPLANATION -->
+
+                    <div class="explanation">
+
+                        <span class="small-label">
+                            SAFESIGN EXPLANATION
+                        </span>
+
+                        <p id="ai-explanation">
+                            -
+                        </p>
+
+                    </div>
+
+
+
+                    <!-- ACTIONS -->
+
+                    <div class="security-actions">
+
+                        <button
+                            id="reject-btn"
+                            class="reject-button"
+                        >
+                            Reject
+                        </button>
+
+
+                        <button
+                            id="continue-btn"
+                            class="primary-button"
+                        >
+
+                            Continue to MetaMask
+
+                            <span>
+                                →
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HISTORY
+        ================================================== -->
+
+        <section
+            id="history"
+            class="history-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        02
+                    </span>
+
+
+                    <div>
+
+                        <span class="small-label">
+                            SECURITY HISTORY
+                        </span>
+
+                        <h2>
+                            Recent reviews
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <button
+                    id="history-btn"
+                    class="outline-button"
+                >
+                    Refresh history
+                </button>
+
+            </div>
+
+
+            <div
+                id="transaction-history"
+                class="history-card"
+            >
+
+                <div class="empty-history">
+
+                    <div class="empty-icon">
+                        ✓
+                    </div>
+
+                    <strong>
+                        No reviewed transactions yet
+                    </strong>
+
+                    <span>
+                        Your SafeSign activity will appear here.
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =================================================
+             HOW IT WORKS
+        ================================================== -->
+
+        <section
+            id="how"
+            class="how-section"
+        >
+
+            <div class="section-heading">
+
+                <div>
+
+                    <span class="section-number">
+                        03
+                    </span>
+
+
+                    <div>
+
+                        <span class="small-label">
+                            SIMPLE PROTECTION
+                        </span>
+
+                        <h2>
+                            How SafeSign works
+                        </h2>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <div class="how-grid">
+
+
+                <div class="how-card">
+
+                    <div class="how-number">
+                        01
+                    </div>
+
+                    <h3>
+                        Decode
+                    </h3>
+
+                    <p>
+                        SafeSign reads the transaction calldata
+                        and identifies what function you are calling.
+                    </p>
+
+                </div>
+
+
+
+                <div class="how-card">
+
+                    <div class="how-number">
+                        02
+                    </div>
+
+                    <h3>
+                        Analyze
+                    </h3>
+
+                    <p>
+                        Security rules check permissions,
+                        approvals, addresses and transaction value.
+                    </p>
+
+                </div>
+
+
+
+                <div class="how-card">
+
+                    <div class="how-number">
+                        03
+                    </div>
+
+                    <h3>
+                        Explain
+                    </h3>
+
+                    <p>
+                        You see the important consequences
+                        in simple language before signing.
+                    </p>
+
+                </div>
+
+
+
+                <div class="how-card">
+
+                    <div class="how-number">
+                        04
+                    </div>
+
+                    <h3>
+                        Sign
+                    </h3>
+
+                    <p>
+                        Only after reviewing the risk do you
+                        continue to MetaMask.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+
+    <!-- =====================================================
+         FOOTER
+    ====================================================== -->
+
+    <footer>
+
+        <div class="footer-brand">
+
+            <div class="brand-logo small-logo">
+                ✓
+            </div>
+
+            <strong>
+                SafeSign
+            </strong>
+
+        </div>
+
+
+        <span>
+            DeFi transaction security · Ethereum Sepolia
+        </span>
+
+
+        <span>
+            Built for INNOBLOCK 2.0
+        </span>
+
+    </footer>
+
+
+
+    <!-- =====================================================
+         JAVASCRIPT
+    ====================================================== -->
+
+    <script
+        src="https://cdn.jsdelivr.net/npm/ethers@6.13.5/dist/ethers.umd.min.js"
+    ></script>
+
+    <script src="config.js"></script>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
